@@ -1,0 +1,22 @@
+@use 'variables' as v;
+@mixin desktop(){
+@media(min-width: v.$desktop){
+    @content;
+}
+}
+@mixin tablet(){
+    @media(min-width: v.$tablet){
+        @content;
+    }
+}  
+
+@mixin telefono(){
+    @media(min-width: v.$telefono){
+    @content;
+    }
+}
+@mixin grid($columas, $separacion){
+    display: grid;
+    grid-template-columns:repeat($columas, 1fr);
+    gap: $separacion;
+}
